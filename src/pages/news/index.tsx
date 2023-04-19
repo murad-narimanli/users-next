@@ -30,8 +30,8 @@ export default function News() {
         metaDesc="This is contact page"
       >
         <ul>
-          {data.map((d)=>{
-             return <li> <Link href={`/news/${d.id}`}>{d.news}</Link> </li>
+          {data.map((d , index)=>{
+             return <li key={index}> <Link href={`/news/${d.id}`}>{d.news}</Link> </li>
           })}
         </ul>
      </Layout>

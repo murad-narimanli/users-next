@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "@/components/layout/Layout"
 import axios from "axios"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from 'next/router'
 
 
@@ -80,12 +81,17 @@ export default function Users(props:AboutProps) {
         </div>
 
         <div className="row px-5 w-100 ">
-           {props.users.data.map((user)=>(
-                <>
+           {props.users.data.map((user , index)=>(
+                <React.Fragment key={index}>
                     <Link href={`users/${user.id}`} key={user.id} className="col-4 list-group-item">
                         <div className="card">
                             <div className="card-body">
-                                <img src={user.avatar} className="rounded" alt="..." />
+                                  <Image
+                                        src={user.avatar}
+                                        alt="Picture of the author"
+                                        width={500}
+                                        height={500}
+                                    />
                                 <h5 className="card-title">{`${user.first_name} ${user.last_name}`}</h5>
                                 <p className="card-text">{user.email}</p>
                                 <div className="btn btn-primary">Go somewhere</div>
