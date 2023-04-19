@@ -39,8 +39,8 @@ export default function Users(props:AboutProps) {
         for (let index = 1; index <= total_pages; index++) {
             html.push(index)
         }
-        return html.map((i)=>{
-          return  <li onClick={()=>{ setCurrentPage(i) }} className={`page-item  ${page === i ? 'active': ''}`}><a className="page-link" >{i}</a></li>
+        return html.map((i , index)=>{
+          return  <li key={index} onClick={()=>{ setCurrentPage(i) }} className={`page-item  ${page === i ? 'active': ''}`}><a className="page-link" >{i}</a></li>
         })
     }
 
