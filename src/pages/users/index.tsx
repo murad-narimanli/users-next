@@ -82,8 +82,8 @@ export default function Users(props:AboutProps) {
 
         <div className="row px-5 w-100 ">
            {props.users.data.map((user , index)=>(
-                <React.Fragment key={index}>
-                    <Link href={`users/${user.id}`} key={user.id} className="col-4 list-group-item">
+                <div key={index} className="col-4 list-group-item">
+                    <Link href={`users/${user.id}`} key={user.id} >
                         <div className="card">
                             <div className="card-body">
                                   <Image
@@ -98,7 +98,7 @@ export default function Users(props:AboutProps) {
                             </div>
                         </div>
                     </Link>
-                </React.Fragment>
+                </div>
            ))}
         </div>
         
