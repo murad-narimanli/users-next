@@ -98,7 +98,7 @@ export default function Users(props:AboutProps) {
                             </div>
                         </div>
                     </Link>
-                </>
+                </React.Fragment>
            ))}
         </div>
         
