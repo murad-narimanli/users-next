@@ -89,8 +89,8 @@ export default function Users(props:AboutProps) {
                                   <Image
                                         src={user.avatar}
                                         alt="Picture of the author"
-                                        width={500}
-                                        height={500}
+                                        width={100}
+                                        height={100}
                                     />
                                 <h5 className="card-title">{`${user.first_name} ${user.last_name}`}</h5>
                                 <p className="card-text">{user.email}</p>
